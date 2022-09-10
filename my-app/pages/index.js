@@ -4,6 +4,8 @@ import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
 import { abi, NFT_CONTRACT_ADDRESS } from "../constants";
 import styles from "../styles/Home.module.css";
+import Image from "next/image"
+import cover from "../public/Cover.png";
 
 export default function Home(){
   //walletConne cted keeps the track of whetherr the users wallet is conne cted or not
@@ -355,8 +357,8 @@ export default function Home(){
           </div>
           {renderButton()}
         </div>
-        <div>
-          <img className={styles.image} src="./cryptodevs/0.svg" />
+        <div className={styles.img}>
+          <Image alt="Among Us" src={cover} height="390" width="600" />
         </div>
       </div>
 
